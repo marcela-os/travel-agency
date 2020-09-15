@@ -4,8 +4,7 @@ import {getAllTags} from '../../../redux/tagsRedux';
 import {
   getAllFilters,
   changeSearchPhrase,
-  changeDurationFrom,
-  changeDurationTo,
+  changeDuration,
   createActionAddTag,
   createActionRemoveTag} from '../../../redux/filtersRedux';
 
@@ -17,11 +16,9 @@ const mapStateToProps = state => ({
 
 const mapDispatchToProps = dispatch => ({
   changeSearchPhrase: phrase => dispatch(changeSearchPhrase(phrase)),
-  //changeDuration: value => dispatch(changeDuration(value)),
-  changeDurationFrom: (type, value) => dispatch(changeDurationFrom(type, value)),
-  changeDurationTo: (type, value) => dispatch(changeDurationTo(type, value)),
-  createActionAddTag: (tag, checked) => dispatch(createActionAddTag(tag, checked)),
-  createActionRemoveTag: (tag, checked) => dispatch(createActionRemoveTag(tag, checked)),
+  changeDuration: (type, value) => dispatch(changeDuration({type, value})),
+  createActionAddTag: (tag) => dispatch(createActionAddTag(tag)),
+  createActionRemoveTag: (tag) => dispatch(createActionRemoveTag(tag)),
 
 });
 
