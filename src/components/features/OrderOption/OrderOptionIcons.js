@@ -4,6 +4,7 @@ import { formatPrice } from '../../../utils/formatPrice.js';
 import Icon from '../../common/Icon/Icon.js';
 import PropTypes from 'prop-types';
 
+//nie jestem pewna czy wszystko jest ok z propsami bo wywala ostrzeżenia
 
 const OrderOptionIcons = ({values, required, currentValue, setOptionValue}) => (
   <div className={styles.icon}>
