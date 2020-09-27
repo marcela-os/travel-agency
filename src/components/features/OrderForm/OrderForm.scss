@@ -1,1 +1,18 @@
 @import '../../../styles/settings.scss';
+
+.component {
+  margin-bottom: ($base-size * 3);
+}
+
+h3 {
+	font-size: 18px;
+}
+
+h2 {
+	font-size: 28px;
+}
+
+input {
+	cursor: pointer;
+	text-align: center;
+}
