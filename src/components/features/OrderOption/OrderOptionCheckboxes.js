@@ -31,7 +31,7 @@ class OrderOptionCheckboxes extends React.Component {
 }
 
 OrderOptionCheckboxes.propTypes = {
-  values: PropTypes.string,
+  values: PropTypes.array,
   currentValue: PropTypes.array,
   setOptionValue: PropTypes.func,
 

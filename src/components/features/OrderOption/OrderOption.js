@@ -5,7 +5,7 @@ import OrderOptionIcons from './OrderOptionIcons.js';
 import OrderOptionCheckboxes from './OrderOptionCheckboxes.js';
 import OrderOptionNumber from './OrderOptionNumber.js';
 import OrderOptionText from './OrderOptionText.js';
-import OrderOptionDate from './OrderOptionText.js';
+import OrderOptionDate from './OrderOptionDate.js';
 
 
 const optionTypes = {

@@ -4,9 +4,14 @@ import {
   getOrderOptions,
   setOrderOption} from '../../../redux/orderRedux';
 
-const mapStateToProps = state => ({
-  options: getOrderOptions(state),
-});																	//funkcja mapStateToProps definiuje powiązanie propsów z stanem; przekazanie danych ze stanu aplikacji jako propsów komponentu
+const mapStateToProps = state => {
+  console.log (getOrderOptions(state));
+  return ({
+    options: getOrderOptions(state),
+  });
+};
+
+//funkcja mapStateToProps definiuje powiązanie propsów z stanem; przekazanie danych ze stanu aplikacji jako propsów komponentu
 
 const mapDispatchToProps = dispatch => ({
   setOrderOption: option => dispatch(setOrderOption(option)),

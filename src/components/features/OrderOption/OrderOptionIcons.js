@@ -9,14 +9,14 @@ import PropTypes from 'prop-types';
 const OrderOptionIcons = ({values, required, currentValue, setOptionValue}) => (
   <div className={styles.icon}>
     {required ? '' : (
-      <div setOptionValue=''>
+      <div onClick={() => setOptionValue()}>
         <Icon name='times-circle'/>
 				none
       </div>
     )}
     {values.map(value => (
       <div
-        className={styles.icon + ((currentValue === value.id) ? styles.iconActive : '')}
+        className={styles.icon + ((currentValue === value.id) ? ' ' + styles.iconActive : '')}
         key={value.id}
         onClick={() => setOptionValue(value.id)}
       >
@@ -30,7 +30,7 @@ const OrderOptionIcons = ({values, required, currentValue, setOptionValue}) => (
 OrderOptionIcons.propTypes = {
   values: PropTypes.array,
   required: PropTypes.bool,
-  currentValue:PropTypes.object,
+  currentValue:PropTypes.string,
   setOptionValue: PropTypes.func,
 };
 

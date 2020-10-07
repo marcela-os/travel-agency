@@ -9,7 +9,7 @@ class OrderOptionNumber extends React.Component {
     const {currentValue, limits, price, setOptionValue} = this.props;
     return (
       <div className={styles.number}>
-        <input className={styles.inputSmall} type='number' value={currentValue} min={limits.min} max={limits.max} onChange={event => setOptionValue(event.currentTarget.value)} />
+        <input className={styles.inputSmall} type='number' value={currentValue} min={limits.min} max={limits.max} onChange={event => setOptionValue(Number(event.currentTarget.value))} />
 				({formatPrice(price)})
       </div>
     );
@@ -17,9 +17,9 @@ class OrderOptionNumber extends React.Component {
 }
 
 OrderOptionNumber.propTypes = {
-  currentValue: PropTypes.string,
+  currentValue: PropTypes.number,
   setOptionValue: PropTypes.func,
-  limits: PropTypes.string,
+  limits: PropTypes.object,
   price: PropTypes.string,
 
 };
