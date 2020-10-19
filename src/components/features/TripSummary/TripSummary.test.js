@@ -25,11 +25,11 @@ describe('Component TripSummary', () => {
     const component = shallow(<TripSummary name={expectedName} cost={expectedCost} days={expectedDays} image='image.jpg' id='abc' tags={[]} intro='intro' />);
     console.log(component.debug());
     const renderedName = component.find('.title').text();
-    const renderedCost = component.find('.details').text();
-    const renderedDays = component.find('.details').text();
+    const renderedDays = component.find('.details').childAt(0).text();
+    const renderedCost = component.find('.details').childAt(1).text();
     expect(renderedName).toEqual(expectedName);
-    expect(renderedCost).toEqual(expectedCost);
     expect(renderedDays).toEqual(expectedDays);
+    expect(renderedCost).toEqual(expectedCost);
   });
 
   it('should throw error without required props', () => {
