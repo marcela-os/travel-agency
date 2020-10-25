@@ -63,3 +63,31 @@ describe('Component HappyHourAd with mocked Date', () => {
   checkDescriptionAtTime('11:59:59', '1');
   checkDescriptionAtTime('13:00:00', 23 * 60 * 60 + '');
 });
+
+const checkDescriptionAfterTime = (time, delaySeconds, expectedDescription) => {
+  it(`should show correct value ${delaySeconds} seconds after ${time}`, () => {
+    jest.useFakeTimers(); //1
+    global.Date = mockDate(`2019-05-14T${time}.135Z`);
+
+    const component = shallow(<HappyHourAd {...mockProps} />);
+
+    const newTime = new Date(); 																			//pobieramy "aktualną" datę i godzinę – wcześniej podmieniliśmy Date na klasę, która zawsze zwróci nam tę samą godzinę
+    newTime.setSeconds(newTime.getSeconds() + delaySeconds); 					//modyfikujemy tę godzinę, dodając do niej wartość argumentu delaySeconds
+    global.Date = mockDate(newTime.getTime()); 												//podmieniamy Date na nowy mock ze zmienioną godziną. Dzięki temu od teraz Date będzie zwracał czas późniejszy o tyle sekund, ile podaliśmy w argumencie delaySeconds
+
+    jest.advanceTimersByTime(delaySeconds * 1000); 										// ta linia odpowiedzialna jest za kontrolę biegu czasu w JSie. Za pomocą metody advanceTimersByTime przyspieszamy bieg czasu aby wykonało się kolejne odświeżenie komponentu.
+
+    const renderedTime = component.find(select.promoDescription).text();
+    expect(renderedTime).toEqual(expectedDescription);
+
+    global.Date = trueDate;
+    jest.useRealTimers(); //2
+    //Dzięki dodaniu 1 i 2 bieg czasu w JSie, wykonywanym pomiędzy tymi liniami, będzie kontrolowany przez Jesta.
+  });
+};
+
+describe('Component HappyHourAd with mocked Date and delay', () => {
+  checkDescriptionAfterTime('11:57:58', 2, '120');
+  checkDescriptionAfterTime('11:59:58', 1, '1');
+  checkDescriptionAfterTime('13:00:00', 60 * 60, 22 * 60 * 60 + '');
+});
