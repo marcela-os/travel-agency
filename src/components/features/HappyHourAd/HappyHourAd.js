@@ -32,7 +32,7 @@ class HappyHourAd extends React.Component {
       <select>
         <div className={styles.component}>
           <h3 className={styles.title}>Happy Hour!</h3>
-          <div className='promoDescription'>{newCountdownTime}</div>
+          <div className={styles.promoDescription}>{newCountdownTime}</div>
         </div>
       </select>
     );
