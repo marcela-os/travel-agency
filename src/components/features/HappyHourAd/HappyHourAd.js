@@ -1,7 +1,6 @@
 import React from 'react';
 import styles from './HappyHourAd.scss';
 
-
 class HappyHourAd extends React.Component {
   constructor(){
     super();
@@ -22,11 +21,18 @@ class HappyHourAd extends React.Component {
   }
 
   render(){
+    let newCountdownTime = this.getCountdownTime();
+    if(newCountdownTime > 82800){
+      newCountdownTime = 'Lorem ipsum dolor sit amet';
+    } else {
+      newCountdownTime;
+    }
+
     return (
       <select>
         <div className={styles.component}>
           <h3 className={styles.title}>Happy Hour!</h3>
-          <div className='promoDescription'>{this.getCountdownTime()}</div>
+          <div className='promoDescription'>{newCountdownTime}</div>
         </div>
       </select>
     );
