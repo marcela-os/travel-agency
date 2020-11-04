@@ -1,5 +1,6 @@
 import React from 'react';
 import styles from './HappyHourAd.scss';
+import { formatTime } from '../../../utils/formatTime.js';
 
 class HappyHourAd extends React.Component {
   constructor(){
@@ -25,7 +26,7 @@ class HappyHourAd extends React.Component {
     if(newCountdownTime > 82800){
       newCountdownTime = 'Lorem ipsum dolor sit amet';
     } else {
-      newCountdownTime;
+      newCountdownTime = formatTime();
     }
 
     return (

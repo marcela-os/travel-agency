@@ -12,6 +12,12 @@ const mockProps = {
   promoDescription: 'Lorem ipsum dolor sit amet',
 };
 
+beforeAll(() => {
+  const utilsModule = jest.requireActual('../../../utils/formatTime.js');   //importuje plik formatTime – używamy jest.requireActual, aby upewnić się, że importujemy faktyczny kod tego pliku, a nie jego zmockowaną wersję
+  utilsModule.formatTime = jest.fn(seconds => seconds);   //zmieniamy znajdującą się w nim funkcję formatTime na mock funkcji, który zawsze zwróci argument przekazany tej funkcji
+});
+
+
 describe('Component HappyHourAd', () => {
   it('should render without crashing', () => {
     const component = shallow(<HappyHourAd />);
