@@ -13,14 +13,24 @@ import {Row, Col} from 'react-flexbox-grid';
 
 const sendOrder = (options, tripCost, tripId, tripName, regionCode, countryCode) => {
   const totalCost = formatPrice(calculateTotal(tripCost, options));
+  console.log('countryCode', countryCode);
+
+  if (options.name === '' || options.name.length < 3) {
+    alert('Please write at least 3 letters');
+    return;
+  }
+  if (options.contact === '' || options.contact.length < 9) {
+    alert('Please write at least 9 letters');
+    return;
+  }
 
   const payload = {
     ...options,
     totalCost,
     tripId,
     tripName,
-    regionCode: regionCode,  // mam do tego pytania
-    countryCode: 'test', //nie wiem co tu powinno być
+    regionCode: regionCode,
+    countryCode: countryCode,
   };
 
   const url = settings.db.url + '/' + settings.db.endpoint.orders;
@@ -44,7 +54,8 @@ const sendOrder = (options, tripCost, tripId, tripName, regionCode, countryCode)
 
 class OrderForm extends React.Component {
   render(){
-    const {tripCost, options, setOrderOption} = this.props;
+    console.log(this.props);
+    const {tripCost, options, setOrderOption, tripId, tripName, regionCode, countryCode} = this.props;
     return (
       <Row className={styles.component}>
         {pricing.map(option => (
@@ -55,7 +66,7 @@ class OrderForm extends React.Component {
         <Col xs={12}>
           <OrderSummary tripCost={tripCost} options={options}/>
         </Col>
-        <Button onClick={() => sendOrder(options, tripCost)}>Order now!</Button>
+        <Button onClick={() => sendOrder(options, tripCost, tripId, tripName, regionCode, countryCode)}>Order now!</Button>
       </Row>
     );
   }
@@ -65,6 +76,10 @@ OrderForm.propTypes = {
   tripCost: PropTypes.string,
   options: PropTypes.object,
   setOrderOption: PropTypes.func,
+  tripId: PropTypes.string,
+  tripName: PropTypes.string,
+  regionCode: PropTypes.string,
+  countryCode: PropTypes.string,
 };
 
 export default OrderForm;

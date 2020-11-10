@@ -20,12 +20,12 @@ beforeAll(() => {
 
 describe('Component HappyHourAd', () => {
   it('should render without crashing', () => {
-    const component = shallow(<HappyHourAd />);
+    const component = shallow(<HappyHourAd {...mockProps}/>);
     expect(component).toBeTruthy();
   });
 
   it('should render heading and description', () => {
-    const component = shallow(<HappyHourAd />);
+    const component = shallow(<HappyHourAd {...mockProps}/>);
     expect(component.exists(select.title)).toEqual(true);
     expect(component.exists(select.promoDescription)).toEqual(true);
   });

@@ -4,9 +4,8 @@ export const formatTime = (newformatTime) => {
   }
 
   let seconds = (0 + Math.floor(newformatTime % 60));
-  let minutes = (0 + Math.floor((newformatTime /= 60) % 60));
-  let hours = (0 + Math.floor(newformatTime /= 3600));
-
+  let minutes = (0 + Math.floor((newformatTime / 60) % 60));
+  let hours = (0 + Math.floor(newformatTime / 3600));
 
   let zero = '00';
   let newHours = (zero+hours).slice(-zero.length);

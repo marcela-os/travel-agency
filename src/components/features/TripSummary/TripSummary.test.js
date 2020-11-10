@@ -27,9 +27,10 @@ describe('Component TripSummary', () => {
     const renderedName = component.find('.title').text();
     const renderedDays = component.find('.details').childAt(0).text();
     const renderedCost = component.find('.details').childAt(1).text();
+
     expect(renderedName).toEqual(expectedName);
-    expect(renderedDays).toEqual(expectedDays);
-    expect(renderedCost).toEqual(expectedCost);
+    expect(renderedDays).toEqual(`${expectedDays} days`); //inny zapis: (expectedDays) + ' days'
+    expect(renderedCost).toEqual(`from ${expectedCost}`);
   });
 
   it('should throw error without required props', () => {
