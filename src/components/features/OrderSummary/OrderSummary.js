@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import styles from './OrderSummary.scss';
 import { calculateTotal } from '../../../utils/calculateTotal.js';
 import { formatPrice } from '../../../utils/formatPrice.js';
+import { promoPrice } from '../../../utils/promoPrice.js';
 
 
 class OrderSummary extends React.Component {
@@ -11,7 +12,10 @@ class OrderSummary extends React.Component {
     const {tripCost, options} = this.props;
     const totalPrice = calculateTotal(formatPrice(tripCost), options);
     return (
-      <h2 className={styles.component}> Total: <strong>${totalPrice}</strong></h2>
+      <div className={styles.component}>
+        <h2> Price from: <strong>${promoPrice(totalPrice)}</strong></h2>
+        <h3> Standard price: <strong>${totalPrice}</strong></h3>
+      </div>
     );
   }
 }

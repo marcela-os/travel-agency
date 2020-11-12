@@ -20,7 +20,8 @@ const Trip = ({error, name, image, cost, days, description, country, intro, id})
     return <NotFound />;
   }
   else {
-    console.log('country', country);
+    //console.log('country', country);
+    console.log('cost', cost);
     return (
       <Section>
         <Grid>
@@ -38,7 +39,7 @@ const Trip = ({error, name, image, cost, days, description, country, intro, id})
                 </div>
                 <List variant='light'>
                   <ListItem title={`<strong>Duration:</strong> ${days} days`} icon='calendar-alt' />
-                  <ListItem title={`<strong>Price:</strong> from ${cost}`} icon='money-bill-wave' />
+                  <ListItem title={`<strong>Standard price:</strong> from ${cost}`} icon='money-bill-wave' />
                 </List>
               </Col>
             </Row>

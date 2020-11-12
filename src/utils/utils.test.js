@@ -1,4 +1,5 @@
 import { formatTime } from './formatTime';
+import { promoPrice } from './promoPrice';
 
 describe('utils', () => {
   describe('formatTime', () => {
@@ -24,5 +25,28 @@ describe('utils', () => {
       expect(formatTime(120)).toBe('00:02:00');
       expect(formatTime(3604)).toBe('01:00:04');
     });
+  });
+
+  describe('promoPrice', () => {
+
+    it('should return null if there is no arg', () => {
+      expect(promoPrice()).toBe(null);
+    });
+
+    it('should return null if arg is not a number', () => {
+      expect(promoPrice('abc')).toBe(null);
+      expect(promoPrice(() => {})).toBe(null);
+    });
+
+    it('should return null if arg is lower than zero', () => {
+      expect(promoPrice(-1)).toBe(null);
+      expect(promoPrice(-2)).toBe(null);
+    });
+
+    it('should correctly subtract 20% from the cost', () => {
+      expect(promoPrice(100, 20)).toBe(80);
+      expect(promoPrice(3580, 6)).toBe(2864);
+    });
+
   });
 });
