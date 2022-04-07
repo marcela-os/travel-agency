@@ -9,6 +9,8 @@
 
 Travel agency website that offers tours with various options. The customer can search for tours by duration, name and tags. There are personalized tour options that anyone can add depending on their preferences. On the homepage there is a counter counting down to Happy Hour.
 
+[:sparkles: Published version](https://marcela-os.github.io/travel-agency/)
+
 
 ## Tech Stack
 

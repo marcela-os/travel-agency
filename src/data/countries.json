@@ -8079,7 +8079,7 @@
         "nativeName": "ไทย"
       }
     ],
-    "flag": "https://restcountries.eu/data/tha.svg",
+    "flag": "https://loremflickr.com/400/200/landscape,Thailand/all?lock=23",
     "name": "Thailand",
     "alpha2Code": "TH",
     "alpha3Code": "THA",
@@ -8114,7 +8114,7 @@
         "nativeName": "Português"
       }
     ],
-    "flag": "https://restcountries.eu/data/tls.svg",
+    "flag": "https://loremflickr.com/400/200/landscape,Timor-Leste/all?lock=3",
     "name": "Timor-Leste",
     "alpha2Code": "TL",
     "alpha3Code": "TLS",
@@ -8145,7 +8145,7 @@
         "nativeName": "français"
       }
     ],
-    "flag": "https://restcountries.eu/data/tgo.svg",
+    "flag": "https://media.worldnomads.com/travel-safety/west-africa/traditional-tribe-togo-gettyimages-1055040356.jpg",
     "name": "Togo",
     "alpha2Code": "TG",
     "alpha3Code": "TGO",
@@ -8178,7 +8178,7 @@
         "nativeName": "English"
       }
     ],
-    "flag": "https://restcountries.eu/data/tkl.svg",
+    "flag": "https://loremflickr.com/400/200/landscape,Tokelau/all?lock=16",
     "name": "Tokelau",
     "alpha2Code": "TK",
     "alpha3Code": "TKL",
@@ -8303,7 +8303,7 @@
         "nativeName": "Türkçe"
       }
     ],
-    "flag": "https://restcountries.eu/data/tur.svg",
+    "flag": "https://media.worldnomads.com/Explore/middle-east/hagia-sophia-church-istanbul-turkey-gettyimages-skaman306.jpg",
     "name": "Turkey",
     "alpha2Code": "TR",
     "alpha3Code": "TUR",
@@ -8450,7 +8450,7 @@
         "nativeName": "Kiswahili"
       }
     ],
-    "flag": "https://restcountries.eu/data/uga.svg",
+    "flag": "https://loremflickr.com/400/200/landscape,Uganda/all?lock=20",
     "name": "Uganda",
     "alpha2Code": "UG",
     "alpha3Code": "UGA",
@@ -8485,7 +8485,7 @@
         "nativeName": "Українська"
       }
     ],
-    "flag": "https://restcountries.eu/data/ukr.svg",
+    "flag": "https://loremflickr.com/400/200/landscape,Ukraine/all?lock=24",
     "name": "Ukraine",
     "alpha2Code": "UA",
     "alpha3Code": "UKR",
@@ -8522,7 +8522,7 @@
         "nativeName": "العربية"
       }
     ],
-    "flag": "https://restcountries.eu/data/are.svg",
+    "flag": "https://loremflickr.com/400/200/landscape,United%20Arab%20Emirates/all?lock=5",
     "name": "United Arab Emirates",
     "alpha2Code": "AE",
     "alpha3Code": "ARE",
@@ -8593,7 +8593,7 @@
         "nativeName": "English"
       }
     ],
-    "flag": "https://restcountries.eu/data/usa.svg",
+    "flag": "https://loremflickr.com/400/200/landscape,United%20States%20of%20America/all?lock=4",
     "name": "United States of America",
     "alpha2Code": "US",
     "alpha3Code": "USA",
@@ -8720,7 +8720,7 @@
         "nativeName": "français"
       }
     ],
-    "flag": "https://restcountries.eu/data/vut.svg",
+    "flag": "https://loremflickr.com/400/200/landscape,Vanuatu/all?lock=8",
     "name": "Vanuatu",
     "alpha2Code": "VU",
     "alpha3Code": "VUT",
@@ -8749,7 +8749,7 @@
         "nativeName": "Español"
       }
     ],
-    "flag": "https://restcountries.eu/data/ven.svg",
+    "flag": "https://loremflickr.com/400/200/landscape,Venezuela%20/all?lock=9",
     "name": "Venezuela",
     "alpha2Code": "VE",
     "alpha3Code": "VEN",
@@ -8782,7 +8782,7 @@
         "nativeName": "Tiếng Việt"
       }
     ],
-    "flag": "https://restcountries.eu/data/vnm.svg",
+    "flag": "https://loremflickr.com/400/200/landscape,Viet%20Nam/all?lock=6",
     "name": "Viet Nam",
     "alpha2Code": "VN",
     "alpha3Code": "VNM",
@@ -8849,7 +8849,7 @@
         "nativeName": "Español"
       }
     ],
-    "flag": "https://restcountries.eu/data/esh.svg",
+    "flag": "https://loremflickr.com/400/200/landscape,Western%20Sahara/all?lock=7",
     "name": "Western Sahara",
     "alpha2Code": "EH",
     "alpha3Code": "ESH",
@@ -8914,7 +8914,7 @@
         "nativeName": "English"
       }
     ],
-    "flag": "https://restcountries.eu/data/zmb.svg",
+    "flag": "https://loremflickr.com/400/200/landscape,Zambia/all?lock=13",
     "name": "Zambia",
     "alpha2Code": "ZM",
     "alpha3Code": "ZMB",
@@ -9002,7 +9002,7 @@
         "nativeName": "isiNdebele"
       }
     ],
-    "flag": "https://restcountries.eu/data/zwe.svg",
+    "flag": "https://loremflickr.com/400/200/landscape,Zimbabwe/all?lock=11",
     "name": "Zimbabwe",
     "alpha2Code": "ZW",
     "alpha3Code": "ZWE",
